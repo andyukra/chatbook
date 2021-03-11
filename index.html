@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="chatbook">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <!-- Angular JS -->
+    <script src="angular.min.js"></script>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="estilo12.css">
+    <title>ChatBook</title>
+</head>
+<body>
+    
+    <header>
+        <div class="banner">
+            <div class="contBanner">
+                <nav ng-controller="login">
+                    <img src="img/logo.png" alt="">
+                    <form name="form" ng-submit="enviar()">
+                        <h2>Iniciar Sesión</h2>
+                        <div class="uno">
+                            <div class="dos">
+                                <input type="text" ng-model="user" name="user" placeholder="Usuario" required maxlength="15">
+                                <input type="password" ng-model="pass" name="pass" placeholder="Contraseña" required maxlength="15">
+                            </div>
+                            <button type="submit" ng-disabled="form.$invalid">Entrar</button>
+                        </div>
+                    </form>
+                </nav>
+                <div class="intro">
+                    <h2>PREPARENSE A SOÑAR</h2>
+                    <p>Bienvenidos a ChatBook! El sitio web donde podrás registrate y tener una cuenta, donde podrás compartir fotos, pensamientos, estados multimedia, comentar los estados de tus amigos, dar likes y mucho mucho más! Sientete como en un sueño...</p>
+                    <button onclick="scrollear()">Comenzar</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="description">
+                <div class="desc">
+                        <div class="tarjeta1">
+                            <div class="cajaIcon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <h3>Comparte con amigos</h3>
+                            <p>comparte con tus amigos lo que tu desees, fotos, audios, videos, frases, etc...En 'ChatBook' NO HAY LÍMITES. Puedes hacer lo que quieras, como si estuvieras soñando.</p>
+                        </div>
+                        <div class="tarjeta1">
+                            <div class="cajaIcon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Escribe lo que piensas</h3>
+                            <p>No te guardes tus sentimiendos, déjalos ser libres, déjalos volar, deja volar tu imaginación. Escribe como si fueras un poeta, escribe poesía con tu mente. El mundo quiere saber lo q piensas.</p>
+                        </div>
+                        <div class="tarjeta1">
+                            <div class="cajaIcon">
+                                <i class="far fa-thumbs-up"></i>
+                            </div>
+                            <h3>dale like a lo que gustes</h3>
+                            <p>Comenta los estados de los demás, dale LIKE y hazles saber lo mucho que les importas. Con solo un gesto pequeño puedes alegrarle el día a alguien, creeme te lo  agradeceran.</p>
+                        </div>
+                </div>
+        </section>
+
+        <section class="registro" ng-controller="registro">
+
+            <form action="registro.php" method="POST"">
+                <h1>Comienze su aventura...</h1>
+                <input type="text" placeholder="Ingrese un usuario" name="user" required maxlength="15">
+                <input type="password" placeholder="Ingrese una contraseña" name="pass1" ng-model="pass1" ng-blur="p1()" required maxlength="15">
+                <span ng-show="passCorta">Ingrese una contraseña más larga</span>
+                <input type="password" placeholder="Repita la contraseña" name="pass2" ng-model="pass2" ng-blur="p2()" required maxlength="15">
+                <span ng-show="passNoCoincide">La contraseña ingresada no coincide</span>
+                <input type="email" name="email" ng-model="email" ng-blur="e()" placeholder="Ingrese un email válido" required maxlength="50">
+                <span ng-show="emailNoExiste">El email ingresado no existe</span>
+                <span style="color:green; text-shadow:0 0 10px black;" ng-hide="emailCorrecto">El mail es correcto</span>
+                <input type="number" ng-model="num" placeholder="Escriba su edad" required>
+                <button type="submit" ng-disabled="invalido">Registrarse</button>
+            </form>
+
+        </section>
+    </main>
+    
+    <footer>
+        <p>ChatBook® No se hace responsable por el mal uso que le den, según la ley Nº 32.456 de la Constitución Nacional la página fue hecha solo para fines recreativos. Cualquier intento de lucro, maltrato virtual y/o distorción de la realidad será penada por ley. Derechos reservados ChatBook®. </p>
+    </footer>
+    
+    <script src="main4.js"></script>
+</body>
+</html>

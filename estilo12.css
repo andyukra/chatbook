@@ -1,0 +1,670 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%235e33a3' fill-opacity='0.49' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: 700;
+    font-style:italic;
+}
+
+
+/*************** HEADER ****************/
+
+nav {
+    padding: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background:linear-gradient(rgba(63, 9, 54, 0.8), transparent);
+}
+
+nav form {
+    padding: 15px;
+    background:linear-gradient(-45deg,transparent,rgba(61, 7, 54, 0.726), transparent);
+    border-radius:20px;
+    box-shadow:3px 3px 5px 1px rgba(0, 0, 0, 0.548),
+        inset 1px 1px 1px rgba(255, 255, 255, 0.562);
+    transform: skew(-20deg);
+}
+
+nav form h2 {
+    text-align: center;
+    font-style: normal;
+    padding: 10px;
+    color:white;
+    text-shadow:0 0 10px yellow;
+}
+
+.uno {
+    display:flex;
+    flex-direction: row;
+}
+
+.uno button {
+    padding: 10px;
+    border:none;
+    background:linear-gradient(-45deg, transparent, rgba(238, 130, 238, 0.534) 10%, transparent);
+    border-radius:0 10px 10px 0;
+    font-size:25px;
+    color:white;
+    font-family: 'Balsamiq Sans', cursive;
+    filter:blur(2px);
+    transition: 1s;
+    cursor:pointer;
+}
+
+.uno button:hover {
+    filter:blur(0);
+}
+
+.dos {
+    display:flex;
+    flex-direction: column;
+}
+
+.dos input {
+    padding: 10px;
+    border:none;
+    background-color:rgba(0,0,0,0.3);
+    border-radius:5px 0 0 5px;
+    color:white;
+    font-weight: bolder;
+}
+
+.intro h2{
+    padding: 20px;
+    text-align: center;
+    font-size:5rem;
+    color:white;
+    text-shadow: 0 0 10px yellow, 0 0 50px yellow, 0 0 100px yellow;
+}
+
+.banner {
+    background:url(img/Baner.jpg) center center/cover;
+    width: 100%;
+    height: 700px;
+    box-shadow:0 0 10px 5px black;
+}
+
+.contBanner {
+    width: 100%;
+    height: 100%;
+    background-color:rgba(63, 9, 54, 0.5);
+}
+
+.contBanner p {
+    font-size:30px;
+    color:white;
+}
+
+.intro {
+    width: 70%;
+    margin:3% auto;
+}
+
+
+
+.intro button {
+    width: 50%;
+    display:block;
+    border:none;
+    font-size:50px;
+    background-color:violet;
+    margin:5% auto;
+    color:white;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 20px;
+    border-radius:30px 0px 30px 0px;
+    box-shadow: 5px 5px 7px 1px rgba(0, 0, 0, 0.664),
+        inset 5px 5px 10px rgba(255, 255, 255, 0.788);
+    text-shadow: 0 0 10px rgb(241, 182, 241);
+    filter:blur(5px);
+    cursor:pointer;
+    transition:1s;
+}
+
+.intro button:hover {
+    filter:blur(0);
+}
+
+/***************** MAIN *****************/
+
+/* Desc */
+
+.desc {
+    margin: 10% 1%;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:4rem;
+    text-align:center;
+}
+
+.tarjeta1{
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta1 i{
+    font-size:10rem;
+    color:white;
+    text-shadow: 0 0 10px black;
+}
+
+.tarjeta1 h3 {
+    margin:20px 0;
+    font-size:30px;
+    font-style: oblique;
+}
+
+.tarjeta1 p {
+    font-size:20px;
+}
+
+.cajaIcon {
+    background-color:rgba(129, 72, 129, 0.733);
+    width: 250px;
+    height: 250px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:100%;
+    border:10px solid white;
+}
+
+/* REGISTRO */
+
+.registro{
+    width: 70%;
+    margin:40px auto;
+}
+
+.registro form {
+    width: 70%;
+    padding: 50px;
+    border-radius:20px;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    background:url(img/Baner.jpg) center center/cover;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.61), inset 10px 10px 25px rgba(255, 255, 255, 0.637);
+}
+
+.registro input {
+    padding: 7px;
+    font-size:25px;
+    font-style:normal;
+    margin:20px 0;
+    font-family: 'Balsamiq Sans', cursive;
+    border-radius:10px;
+    border:1px solid rgba(0,0,0,0.1);
+    background:rgba(255,255,255,0.3);
+}
+
+.registro ::-webkit-input-placeholder { color: rgb(83, 83, 83); }
+
+.registro h1 {
+    text-align: center;
+    padding: 15px;
+    font-size:50px;
+    font-style: normal;
+    color:white;
+    text-shadow: 5px 5px 5px blueviolet;
+    filter:blur(1px);
+}
+
+.registro button {
+    padding: 20px;
+    border:none;
+    background-color:violet;
+    font-size:35px;
+    font-family: 'Balsamiq Sans', cursive;
+    cursor:pointer;
+    color:white;
+    border-radius:10px;
+    filter:blur(5px);
+    box-shadow:3px 3px 5px 1px rgba(0, 0, 0, 0.582);
+    transition:1s;
+}
+
+.registro button:hover {
+    filter:blur(0);
+}
+
+.registro form span {
+    color:red;
+    text-shadow:0 0 10px black;
+}
+
+/****************** FOOTER *********************/
+
+footer p{
+    display:block;
+    width: 100%;
+    padding: 20px;
+    background-color:rgba(0,0,0,0.8);
+    color:white;
+    font-size:15px;
+}
+
+/*********************  P E R S O N A L   ***********************/
+/* HEADER  */
+
+.menu {
+    display:flex;
+}
+
+.menu li {
+    margin: 10px;
+    list-style: none;
+}
+
+.welcom {
+    text-transform: uppercase;
+    box-shadow: 0 0 3px 3px black,
+        inset 0 0 10px yellow;
+    padding: 10px;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    text-shadow:0 0 3px black, 3px 0 0 rgb(0, 255, 255), 5px 0 5px rgb(0, 0, 0);
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px;
+    color:white;
+    text-shadow:0 0 10px black;
+    font-size:20px;
+    font-style: normal;
+    transition:1s;
+}
+
+.bordeLi {
+    margin-top:10px;
+    height: 2px;
+    width: 0px;
+    box-shadow: 0 0 10px 1px black;
+    transition: 1s;
+}
+
+.one {
+    background:rgb(194, 45, 45);
+}
+.two {
+    background:rgb(214, 216, 105);
+}
+.three {
+    background:rgb(113, 197, 230);
+}
+
+.menu a:hover {
+    filter:blur(2px);
+}
+
+.menu a:hover ~ .bordeLi {
+    width: 100%;
+}
+
+/*  CUERPO   */
+
+.cuerpo {
+    width: 70%;
+    margin:auto;
+}
+
+/* Up State */
+
+.upState form {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    border-radius:10px;
+    background:linear-gradient(-55deg, transparent, rgb(36, 3, 30) 100%, transparent);
+    box-shadow:1px 1px 3px 1px rgba(0, 0, 0, 0.671),
+        inset 1px 1px 3px white;
+    color:white;
+    width: 100%;
+}
+
+.upState {
+    width: 100%;
+}
+
+.upState form h2 {
+    text-shadow:0 0 10px yellow, 0 0 50px yellow;
+}
+
+.upState input {
+    padding: 10px;
+    font-size:20px;
+    font-family: 'Balsamiq Sans', cursive;
+    border:none;
+    border-radius:10px 0 0 10px;
+    background:rgba(0, 0, 0, 0.356);
+    color:white;
+    width: 100%;
+}
+
+.upState ::-webkit-input-placeholder { color: rgb(255, 255, 255); }
+
+.cajitaState {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.705);
+    border-radius:10px;
+}
+
+.cajitaState button {
+    padding: 10px;
+    border:none;
+    border-radius:0 10px 10px 0;
+    cursor:pointer;
+    background:linear-gradient(45deg, transparent, rgb(32, 7, 24) 100%, transparent);
+    font-family: 'Balsamiq Sans', cursive;
+    font-size:20px;
+    color:white;
+    text-shadow:0 0 10px yellow;
+    transition: 1s;
+}
+
+.cajitaState button:hover {
+    filter:blur(2px);
+    box-shadow:0 0 20px 5px yellow;
+}
+
+/* ALL STATES  */
+
+.allStates {
+    margin:20px 0;
+    border-radius:10px;
+    padding: 25px;
+    background:linear-gradient(45deg, transparent, rgb(32, 7, 24) 100%, transparent);
+    box-shadow: 0 0 5px 1px black;
+    /*opacity:0;
+    filter:blur(10px);*/
+    transition:3s;
+}
+
+.allStates .tarjetaS {
+    width: 100%;
+    border-radius:10px;
+    background:rgba(255, 255, 255, 0.541);
+    padding: 15px;
+    margin: 5px 0;
+}
+
+.allStates .tarjetaS h2 {
+    font-size:30px;
+    text-align:center;
+    font-style: normal;
+    background:linear-gradient(45deg, transparent, rgb(32, 7, 24) 100%, transparent);
+    padding: 10px;
+    border-radius:0 20px 0 0px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.562);
+    color:white;
+    text-shadow:0 0 10px yellow, 0 0 50px yellow, 0 0 120px yellow;
+}
+
+.allStates .tarjetaS .xState {
+    font-size:18px;
+    padding: 10px;
+    border-radius:0;
+    color:rgb(49, 7, 46);
+    background:white;
+}
+
+.xTime {
+    text-align:center;
+    color:white;
+    background:rgba(0,0,0,0.7);
+    padding: 5px;
+    font-style: normal;
+    border-radius:0 0 10px 10px;
+}
+
+/* Caja de comentarios */
+
+.comentarios {
+    margin-top:10px;
+}
+
+.comentarios ul {
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.comentarios ul li {
+    cursor: pointer;
+    color:rgb(18, 2, 88);
+    transition:0.3s;
+}
+
+.comentarios ul li:hover {
+    text-shadow:0 0 7px yellow, 0 0 25px blue;
+}
+
+.coment {
+    display:none;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top:1%;   
+}
+
+.coment textarea {
+    width: 70%;
+    padding: 10px;
+    border-radius:10px 0 0 10px;
+    font-size:25px;
+    border:none;
+    resize: none;
+}
+
+.coment button {
+    border:none;
+    padding: 10px;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size:15px;
+    border-radius: 0 10px 10px 0;
+    background:rgba(0, 0, 0, 0.548);
+    color:white;
+    cursor:pointer;
+    transition:1s;
+}
+
+.coment button:hover {
+    filter:blur(2px);
+}
+
+.toggle {
+    display:flex;
+}
+
+.verC {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    margin-bottom:10px;
+}
+
+.verC button {
+    padding: 7px;
+    border:none;
+    border-radius:10px;
+    font-family: 'Balsamiq Sans', cursive;
+    cursor: pointer;
+    margin-top:5px;
+}
+
+.cajinCom {
+    box-shadow:0 0 15px 2px black;
+    border-radius:5px;
+}
+
+.cajinCom h3 {
+    font-style:normal;
+    padding: 10px;
+    background:rgba(212, 0, 255, 0.2);
+    text-decoration: underline;
+    font-size:21px;
+    color:rgb(78, 20, 78);
+    text-shadow:0 0 2px rgb(4, 0, 255);
+}
+
+.cajinCom p {
+    padding: 5px;
+    background:rgba(0, 26, 255, 0.37);
+    color:white;
+    border-bottom:2px solid black;
+    text-shadow:0 0 5px yellow, 0 0 2px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA */
+@media (max-width: 1500px) {
+    .desc {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .registro form {
+        width: 100%;
+    }
+
+    .intro h2 {
+        font-size:50px;
+    }
+
+    .registro button {
+        filter:blur(1px);
+    }
+
+    .intro button {
+        font-size:30px;
+        filter:blur(0);
+        margin-top:5%;
+        width: 70%;
+    }
+
+    .intro p {
+        font-size:20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .desc {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .registro form {
+        width: 100%;
+    }
+
+    .intro h2 {
+        font-size:50px;
+    }
+
+    .registro button {
+        filter:blur(1px);
+    }
+
+    .intro button {
+        font-size:30px;
+        filter:blur(2px);
+        margin-top:5%;
+        width: 70%;
+    }
+
+    .intro p {
+        font-size:20px;
+    }
+
+    nav form {
+        margin:5% 0 0 0;
+    }
+
+    .cuerpo {
+        width: 90%;
+    }
+}
+
+@media (max-width: 655px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .intro p{
+        display:none;
+    }
+
+    nav form {
+        margin:5% 0 0 0;
+    }
+
+    .cuerpo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .desc {
+        grid-template-columns: 1fr;
+    }
+
+    .registro form {
+        width: 100%;
+    }
+
+    .intro h2 {
+        font-size:40px;
+    }
+
+    .contBanner p {
+        font-size:20px;
+    }
+
+    .registro button {
+        filter:blur(1px);
+    }
+
+    .intro button {
+        font-size:30px;
+        filter:blur(0);
+        margin-top:2%;
+        width: 70%;
+    }
+
+    nav form {
+        margin:5% 0 0 0;
+    }
+
+}
+
